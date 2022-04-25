@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnimationsDemo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30">
+
+            <Label 
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="Last animation: None"
+                FontSize="18"
+                FontAttributes="Bold"
+                x:Name="AnimationLabel"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout Spacing="25" Padding="30" >
+                <Button 
+                Text="Animate Me"
+                FontAttributes="Bold"
+                SemanticProperties.Hint="Animate dot net bot"
+                Clicked="OnAnimationClicked"
+                HorizontalOptions="Center" />
+
+                <Button 
+                Text="Cancel Animation"
+                FontAttributes="Bold"
+                SemanticProperties.Hint="Cancel the dot net bot animation"
+                Clicked="OnCancelAnimationClicked"
+                HorizontalOptions="Center" />
+
+                <Button 
+                Text="Reset"
+                FontAttributes="Bold"
+                SemanticProperties.Hint="Resets the dot net bot properties"
+                Clicked="OnResetClicked"
+                HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <Image
+                x:Name="dotNetBotImage"
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                WidthRequest="250"
+                HeightRequest="500"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
